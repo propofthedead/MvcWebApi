@@ -185,6 +185,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -193,9 +194,18 @@
     <Compile Include="Migrations\201806211812307_intialize.Designer.cs">
       <DependentUpon>201806211812307_intialize.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806212011553_added orders.cs" />
+    <Compile Include="Migrations\201806212011553_added orders.Designer.cs">
+      <DependentUpon>201806212011553_added orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806212022109_added method to orders.cs" />
+    <Compile Include="Migrations\201806212022109_added method to orders.Designer.cs">
+      <DependentUpon>201806212022109_added method to orders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\MvcWebApiTutorialContext.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -269,6 +279,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806211812307_intialize.resx">
       <DependentUpon>201806211812307_intialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806212011553_added orders.resx">
+      <DependentUpon>201806212011553_added orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806212022109_added method to orders.resx">
+      <DependentUpon>201806212022109_added method to orders.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

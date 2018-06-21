@@ -10,7 +10,7 @@ namespace MVCWebApiTutorial.Models
 	{
 		public MvcWebApiTutorialContext() : base() { }
 
-		public System.Data.Entity.DbSet<MVCWebApiTutorial.Models.Customer> Customers { get; set; }
-
+		public DbSet<MVCWebApiTutorial.Models.Customer> Customers { get; set; }
+		public DbSet<Order> Orders { get; set; }
 	}
 }
