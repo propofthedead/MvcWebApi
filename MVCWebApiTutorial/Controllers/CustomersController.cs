@@ -17,5 +17,14 @@ namespace MVCWebApiTutorial.Controllers
 		public IEnumerable<Customer> List() {
 			return db.Customers.ToList();
 		}
+		[HttpGet]
+		[ActionName("Get")]
+		public Customer Get(int? id)
+		{
+			if (id == null) {
+				return null;
+			}
+			return db.Customers.Find(id);
+		}
 	}
 }
