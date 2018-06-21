@@ -26,5 +26,43 @@ namespace MVCWebApiTutorial.Controllers
 			}
 			return db.Customers.Find(id);
 		}
+		[HttpPost]
+		[ActionName("Create")]
+		public bool Create(Customer customer) {
+			if (customer == null)
+				return false;
+			if (!ModelState.IsValid)
+				return false;
+			db.Customers.Add(customer);
+			db.SaveChanges();
+			return true;
+		}
+		[HttpPost]
+		[ActionName("Change")]
+		public bool Change(Customer customer) {
+			if (customer == null)
+				return false;
+			if (!ModelState.IsValid)
+				return false;
+			var cust = db.Customers.Find(customer.Id);
+			cust.Name = customer.Name;
+			cust.City = customer.City;
+			cust.State = customer.State;
+			cust.Preferred = customer.Preferred;
+			db.SaveChanges();
+			return true;
+		}
+		[HttpPost]
+		[ActionName("Remove")]
+		public bool Remove(Customer customer) {
+			if (customer == null)
+				return false;
+			if (!ModelState.IsValid)
+				return false;
+			var cust = db.Customers.Find(customer.Id);
+			db.Customers.Remove(cust);
+			db.SaveChanges();
+			return true;
+		}
 	}
 }
